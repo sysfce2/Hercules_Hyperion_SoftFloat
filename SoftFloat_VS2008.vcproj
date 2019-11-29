@@ -1614,11 +1614,11 @@
 						RelativePath="source\8086-SSE\specialize.h"
 						>
 					</File>
- 					<File
- 						RelativePath="source\8086-SSE\specialize.h.unmodified"
- 						>
- 					</File>
-                </Filter>
+					<File
+						RelativePath="source\8086-SSE\specialize.h.unmodified"
+						>
+					</File>
+				</Filter>
 				<Filter
 					Name="include"
 					>
@@ -1642,7 +1642,7 @@
 						RelativePath="source\include\softfloat.h"
 						>
 					</File>
- 					<File
+					<File
 						RelativePath="source\include\softfloat.h.unmodified"
 						>
 					</File>
@@ -2267,6 +2267,22 @@
 						</File>
 						<File
 							RelativePath="SoftFloat_VS2017.vcxproj.filters"
+							>
+						</File>
+					</Filter>
+					<Filter
+						Name="vs2019"
+						>
+						<File
+							RelativePath=".\SoftFloat_VS2019.sln"
+							>
+						</File>
+						<File
+							RelativePath=".\SoftFloat_VS2019.vcxproj"
+							>
+						</File>
+						<File
+							RelativePath=".\SoftFloat_VS2019.vcxproj.filters"
 							>
 						</File>
 					</Filter>

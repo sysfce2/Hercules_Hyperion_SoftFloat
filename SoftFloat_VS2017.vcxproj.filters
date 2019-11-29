@@ -80,6 +80,9 @@
     <Filter Include="Other Files\build\msvc\VS2017">
       <UniqueIdentifier>{EFA3B253-AEC0-47ce-8A62-829D86C8E4CD}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Other Files\build\msvc\VS2019">
+      <UniqueIdentifier>{12ECD9FD-68D7-403e-8402-B4ACA2726668}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Other Files\build\scripts">
       <UniqueIdentifier>{336e2aa7-f7e3-4b49-9b83-fac3ecd70949}</UniqueIdentifier>
     </Filter>
@@ -1567,6 +1570,15 @@
     </None>
     <None Include="SoftFloat_VS2017.vcxproj.filters">
       <Filter>Other Files\build\msvc\VS2017</Filter>
+    </None>
+    <None Include="SoftFloat_VS2019.sln">
+      <Filter>Other Files\build\msvc\VS2019</Filter>
+    </None>
+    <None Include="SoftFloat_VS2019.vcxproj">
+      <Filter>Other Files\build\msvc\VS2019</Filter>
+    </None>
+    <None Include="SoftFloat_VS2019.vcxproj.filters">
+      <Filter>Other Files\build\msvc\VS2019</Filter>
     </None>
     <None Include="build">
       <Filter>Other Files\build\scripts\Linux</Filter>
