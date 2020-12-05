@@ -2,6 +2,21 @@
 #   Define the project
 #------------------------------------------------------------------------------
 
+# This file is no longer used!
+
+# From: https://cmake.org/cmake/help/v3.2/command/project.html
+#
+# The top-level CMakeLists.txt file for a project must contain a literal,
+# direct call to the project() command; loading one through the include()
+# command is not sufficient. If no such call exists, CMake will issue a
+# warning and pretend there is a project(Project) at the top to enable the
+# default languages (C and CXX).
+#
+# Note Call the project() command near the top of the top-level CMakeLists.txt,
+# but after calling cmake_minimum_required(). It is important to establish
+# version and policy settings before invoking other commands whose behavior
+# they may affect. See also policy CMP0000.
+
 #  PROGRAMMING NOTE: SoftFloat doesn't have a numeric version.  Rather, it has
 #  an alphabetic version: '3e'.  But numeric versions are preferred since they
 #  can be more easily compared with one another than alphabetic versions.  We
@@ -12,11 +27,11 @@
 
 #------------------------------------------------------------------------------
 
-set( EXTPKG_NAME  "SoftFloat"                                   )
-set( EXTPKG_VERS  "3.5.0"                                       )
-set( EXTPKG_DESC  "Berkeley IEEE Binary Floating-Point Library" )
-
-project( ${EXTPKG_NAME} VERSION ${EXTPKG_VERS} )
-set( PROJECT_DESCRIPTION "${EXTPKG_DESC}" CACHE PATH "Project description" FORCE )
+# set( EXTPKG_NAME  "SoftFloat"                                   )
+# set( EXTPKG_VERS  "3.5.0"                                       )
+# set( EXTPKG_DESC  "Berkeley IEEE Binary Floating-Point Library" )
+#
+# project( ${EXTPKG_NAME} VERSION ${EXTPKG_VERS} LANGUAGES C)
+# set( PROJECT_DESCRIPTION "${EXTPKG_DESC}" CACHE PATH "Project description" FORCE )
 
 #------------------------------------------------------------------------------
