@@ -83,7 +83,6 @@ set( SoftFloat_PRIMITIVES_UNUSED
      source/s_compare128M.c
      source/s_compare96M.c
      source/s_compareNonnormExtF80M.c
-     source/s_countLeadingZeros16.c
      source/s_invalidExtF80M.c
      source/s_invalidF128M.c
      source/s_isNaNF128M.c
@@ -123,11 +122,9 @@ set( SoftFloat_SPECIALISED_UNUSED
      source/8086-SSE/s_commonNaNToExtF80M.c
      source/8086-SSE/s_commonNaNToExtF80UI.c
      source/8086-SSE/s_commonNaNToF128M.c
-     source/8086-SSE/s_commonNaNToF16UI.c
      source/8086-SSE/s_extF80MToCommonNaN.c
      source/8086-SSE/s_extF80UIToCommonNaN.c
      source/8086-SSE/s_f128MToCommonNaN.c
-     source/8086-SSE/s_f16UIToCommonNaN.c
      source/8086-SSE/s_propagateNaNExtF80M.c
      source/8086-SSE/s_propagateNaNExtF80UI.c
      source/8086-SSE/s_propagateNaNF128M.c
@@ -143,14 +140,12 @@ set( SoftFloat_SPECIALISED_UNUSED
      source/8086/s_commonNaNToExtF80UI.c
      source/8086/s_commonNaNToF128M.c
      source/8086/s_commonNaNToF128UI.c
-     source/8086/s_commonNaNToF16UI.c
      source/8086/s_commonNaNToF32UI.c
      source/8086/s_commonNaNToF64UI.c
      source/8086/s_extF80MToCommonNaN.c
      source/8086/s_extF80UIToCommonNaN.c
      source/8086/s_f128MToCommonNaN.c
      source/8086/s_f128UIToCommonNaN.c
-     source/8086/s_f16UIToCommonNaN.c
      source/8086/s_f32UIToCommonNaN.c
      source/8086/s_f64UIToCommonNaN.c
      source/8086/s_propagateNaNExtF80M.c
@@ -167,14 +162,12 @@ set( SoftFloat_SPECIALISED_UNUSED
      source/ARM-VFPv2-defaultNaN/s_commonNaNToExtF80UI.c
      source/ARM-VFPv2-defaultNaN/s_commonNaNToF128M.c
      source/ARM-VFPv2-defaultNaN/s_commonNaNToF128UI.c
-     source/ARM-VFPv2-defaultNaN/s_commonNaNToF16UI.c
      source/ARM-VFPv2-defaultNaN/s_commonNaNToF32UI.c
      source/ARM-VFPv2-defaultNaN/s_commonNaNToF64UI.c
      source/ARM-VFPv2-defaultNaN/s_extF80MToCommonNaN.c
      source/ARM-VFPv2-defaultNaN/s_extF80UIToCommonNaN.c
      source/ARM-VFPv2-defaultNaN/s_f128MToCommonNaN.c
      source/ARM-VFPv2-defaultNaN/s_f128UIToCommonNaN.c
-     source/ARM-VFPv2-defaultNaN/s_f16UIToCommonNaN.c
      source/ARM-VFPv2-defaultNaN/s_f32UIToCommonNaN.c
      source/ARM-VFPv2-defaultNaN/s_f64UIToCommonNaN.c
      source/ARM-VFPv2-defaultNaN/s_propagateNaNExtF80M.c
@@ -191,14 +184,12 @@ set( SoftFloat_SPECIALISED_UNUSED
      source/ARM-VFPv2/s_commonNaNToExtF80UI.c
      source/ARM-VFPv2/s_commonNaNToF128M.c
      source/ARM-VFPv2/s_commonNaNToF128UI.c
-     source/ARM-VFPv2/s_commonNaNToF16UI.c
      source/ARM-VFPv2/s_commonNaNToF32UI.c
      source/ARM-VFPv2/s_commonNaNToF64UI.c
      source/ARM-VFPv2/s_extF80MToCommonNaN.c
      source/ARM-VFPv2/s_extF80UIToCommonNaN.c
      source/ARM-VFPv2/s_f128MToCommonNaN.c
      source/ARM-VFPv2/s_f128UIToCommonNaN.c
-     source/ARM-VFPv2/s_f16UIToCommonNaN.c
      source/ARM-VFPv2/s_f32UIToCommonNaN.c
      source/ARM-VFPv2/s_f64UIToCommonNaN.c
      source/ARM-VFPv2/s_propagateNaNExtF80M.c
@@ -418,7 +409,6 @@ set( SoftFloat_OTHERS_UNUSED
      source/f16_to_extF80M.c
      source/f16_to_f128.c
      source/f16_to_f128M.c
-     source/f16_to_f32.c
      source/f16_to_f64.c
      source/f16_to_i32.c
      source/f16_to_i32_r_minMag.c
@@ -463,7 +453,6 @@ set( SoftFloat_OTHERS_UNUSED
      source/s_normRoundPackToF16.c
      source/s_normSubnormalExtF80Sig.c
      source/s_normSubnormalF128SigM.c
-     source/s_normSubnormalF16Sig.c
      source/s_remStepMBy32.c
      source/s_roundMToI64.c
      source/s_roundMToUI64.c
@@ -471,7 +460,6 @@ set( SoftFloat_OTHERS_UNUSED
      source/s_roundPackMToF128M.c
      source/s_roundPackToExtF80.c
      source/s_roundPackToF128.c
-     source/s_roundPackToF16.c
      source/s_roundPackToF32.c
      source/s_roundPackToF64.c
      source/s_roundToI32.c
@@ -531,6 +519,30 @@ set( SoftFloat_ADDITIONAL_HERC
 
 #------------------------------------------------------------------------------
 
+set( SoftFloat_NEEDED_BY_HERC
+
+     source/f16_to_f32.c
+     source/f32_to_f16.c
+
+     source/s_countLeadingZeros16.c
+     source/s_normSubnormalF16Sig.c
+     source/s_roundPackToF16.c
+
+     source/8086-SSE/s_commonNaNToF16UI.c
+     source/8086-SSE/s_f16UIToCommonNaN.c
+
+     source/8086/s_commonNaNToF16UI.c
+     source/8086/s_f16UIToCommonNaN.c
+
+     source/ARM-VFPv2/s_commonNaNToF16UI.c
+     source/ARM-VFPv2/s_f16UIToCommonNaN.c
+
+     source/ARM-VFPv2-defaultNaN/s_commonNaNToF16UI.c
+     source/ARM-VFPv2-defaultNaN/s_f16UIToCommonNaN.c
+)
+
+#------------------------------------------------------------------------------
+
 set( ${PROJECT_NAME}_SRCS
 
      softfloat_version.c
@@ -544,6 +556,7 @@ set( ${PROJECT_NAME}_SRCS
      ${SoftFloat_SPECIALISED_HERC}
      ${SoftFloat_OTHERS_HERC}
      ${SoftFloat_ADDITIONAL_HERC}
+     ${SoftFloat_NEEDED_BY_HERC}
 )
 
 list( SORT ${PROJECT_NAME}_SRCS )
